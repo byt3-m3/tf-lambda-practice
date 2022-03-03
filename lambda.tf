@@ -9,10 +9,10 @@ data "archive_file" "welcome" {
 }
 
 
-resource "aws_lambda_function" "test_lambda" {
+resource "aws_lambda_function" "welcome_1" {
   filename      = "${local.lambda_zip}"
-  function_name = "welcome"
-  role          = "${aws_iam_role.lambda_role.arn}"
+  function_name = "welcome_1"
+  role          = "${aws_iam_role.lambda_role_a.arn}"
   handler       = "welcome.hello"
 
 
